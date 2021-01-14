@@ -14,8 +14,8 @@ const routes: Routes = [
     loadChildren: () => import('./dash/dash.module').then(mod => mod.DashModule),
   },
   {
-    path: '**',
-    redirectTo: '/auth/signin'
+    path: '',
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule),
   }
 ];
 

@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "angular-epsi"
+  "defaultProject": "angular-epsi",
+  "cli": {
+    "analytics": "aa575c4a-b62c-46c5-bb68-b3e246990527"
+  }
 }
