@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material';
 @Injectable({
   providedIn: 'root'
 })
-export class CanActivateGuard implements CanActivate {
+export class CanActivateForAdminGuard implements CanActivate {
 
   constructor(
     private authService: AuthService,
@@ -42,12 +42,12 @@ export class CanActivateGuard implements CanActivate {
             return false;
           }
           return true;
-        } else {/*
+        } else {
           if ( !response.roles.includes('ROLE_ADMIN') && ('admin' in next.data) ) {
             this.router.navigate(['/auth/signin']);
             this.snackBar.open("Vous n'avez pas les droits nécessaires pour accéder à cette page");
             return false;
-          }*/
+          }
           return true;
         }
       })
@@ -55,21 +55,3 @@ export class CanActivateGuard implements CanActivate {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

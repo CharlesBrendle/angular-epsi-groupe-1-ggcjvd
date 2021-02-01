@@ -28,4 +28,13 @@ export class AppComponent {
     this.snackBar.open('Déconnection réussie');
   }
 
+  get isAdmin(): boolean {
+    if(AuthService.isSignedIn){
+      return AuthService.isAdmin;
+    }
+    else{
+      return false;
+    }
+  }
+
 }
